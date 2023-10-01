@@ -16,36 +16,24 @@
   <RouterView />
 </template>
 
-
-
-
-
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import { onListClick } from './methods'
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-  // methods:{
-  //   onListClick(){
-  //     alert("user clicked on this button")
-  //   }
-  // }
-}
+import { onListClick } from './App.vue'
 </script>
+
 <script>
-import { ref } from 'vue'
-
-const methods = {
-  onListClick() {
-    alert("L'utilisateur a cliqué sur ce bouton");
+//import { ref } from 'vue'
+// const onListClick =()=> {
+//    alert("L'utilisateur a cliqué sur ce bouton");
+//  }
+ const methods = {
+  onListClick(){
+    alert('test alert')
   }
-}
 
-export { onListClick }
+ }
+export { methods }
 </script>
 
 
