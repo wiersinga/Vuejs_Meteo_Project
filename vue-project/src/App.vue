@@ -4,7 +4,7 @@
 
     <div class="wrapper">
       <HelloWorld msg="Météo de jour?!" />
-      <button @click="onListClick">click here!</button>
+      <button @click="onListClick">cliquez ici !</button>
 
       <nav>
         <RouterLink to="/">Accueil</RouterLink>
@@ -19,22 +19,35 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import { onListClick } from './App.vue'
+//import  { functionOnList } from './App.vue'
 </script>
 
 <script>
+export default {
+  methods : {
+    onListClick(){
+      return alert("L'utilisateur a cliqué sur ce bouton");
+    }
+  }
+}
+</script>
+// defineProps({
+//   methods:{
+//
+//   }
+// })
+
 //import { ref } from 'vue'
 // const onListClick =()=> {
 //    alert("L'utilisateur a cliqué sur ce bouton");
 //  }
- const methods = {
-  onListClick(){
-    alert('test alert')
-  }
+//  const methods = {
+//   onListClick(){
+//     alert('test alert')
+//   }
+//
+//  }
 
- }
-export { methods }
-</script>
 
 
 
@@ -55,10 +68,6 @@ nav {
   text-align: center;
   margin-top: 2rem;
 }
-
-
-
-
 
 nav a {
   display: inline-block;

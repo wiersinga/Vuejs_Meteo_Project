@@ -1,16 +1,17 @@
 <script setup>
-import props from './CityWeather.vue'
+//import {props} from './CityWeather.vue'
 
 </script>
 
 <script>
-const props =  {
+export default {
+  props : {
     name: String,
     weather: String,
     temperature: Number,
     updatedAt: Date
   }
-  export {props}
+}
 </script>
 
 
